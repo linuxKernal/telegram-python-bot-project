@@ -4,9 +4,9 @@ con = sqlite3.connect("simple.db")
 
 cur = con.cursor()
 
-res = cur.execute("SELECT * FROM simple.sqlite_master WHERE type='table';")
+res = cur.execute("SELECT * FROM simple;")
 
-print(res.fetchone())
+print(res.fetchall())
 
 con.commit()
 con.close()
